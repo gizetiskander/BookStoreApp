@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BookStoreApp.Pages.MainBookPage">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand" BackgroundColor="#2A2A2A">
+            <Image Source="Fon.png" VerticalOptions="FillAndExpand" BackgroundColor="#2A2A2A">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="AuthorizationPageBTN_Clicked"/>
+                </Image.GestureRecognizers>
+            </Image>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
