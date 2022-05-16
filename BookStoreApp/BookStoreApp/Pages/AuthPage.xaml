@@ -1,9 +1,52 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="BookStoreApp.Pages.AuthPage"  Visual="Material"
+             x:Class="BookStoreApp.Pages.AuthPage"  BackgroundImageSource="FonLogIn.jpg" Visual="Material" 
              NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
-        
+        <StackLayout>
+
+            <StackLayout
+            VerticalOptions="FillAndExpand">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="4*" />
+                        <RowDefinition Height="4*" />
+                        <RowDefinition Height="3*" />
+                    </Grid.RowDefinitions>
+
+                    <StackLayout Grid.Row="0" Margin="40,90" HorizontalOptions="Start" >
+                     <Label FontSize="24" HorizontalOptions="CenterAndExpand" Text="Добро пожаловать" 
+                            TextColor="White" VerticalOptions="CenterAndExpand"/>
+                        <Label Text="в мир книг!" FontSize="24" TextColor="White" VerticalOptions="CenterAndExpand"/>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="1" Spacing="30" Margin="40,0"
+                    VerticalOptions="CenterAndExpand">
+                        <Entry x:Name="LoginLBl" BackgroundColor="#2A2A2A" HorizontalOptions="FillAndExpand"
+                        Placeholder="Login" PlaceholderColor="#B2B2B2" VerticalOptions="CenterAndExpand" 
+                        TextColor="White" />
+                        <Entry
+                        x:Name="PasswordLBl" BackgroundColor="#2A2A2A" HorizontalOptions="FillAndExpand"
+                        IsPassword="True" Placeholder="Password" TextColor="White" PlaceholderColor="#B2B2B2"
+                        VerticalOptions="CenterAndExpand" />
+                        <StackLayout Orientation="Horizontal" Spacing="10" 
+                        HorizontalOptions="CenterAndExpand" Margin="0,0,10,0" Grid.Row="1">
+                            <Button x:Name="LoginBtn" Padding="20,10" BorderColor="#FFBE65" BorderWidth="2" 
+                            BackgroundColor="#2A2A2A" CornerRadius="10" FontSize="16" Text="Войти" TextColor="#FFBE65"
+                            TextTransform="None" Clicked="LoginBtn_Clicked"/>
+                            <Button x:Name="SignUpBtn" Padding="20,10" BorderColor="#F16F54" BorderWidth="2"
+                            BackgroundColor="#2A2A2A" CornerRadius="10" FontSize="16" Text="Регистрация"
+                            TextColor="#F16F54" TextTransform="None" Clicked="SignUpBtn_Clicked"/>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <Label Grid.Row="2" Margin="20,0" FontFamily="Commissioner" FontSize="13" HorizontalOptions="CenterAndExpand"
+                    Text="Чтобы продолжить войдите или зарегистрируйте учетную запись*" TextColor="#CDCDCD"
+                    VerticalOptions="EndAndExpand" />
+                </Grid>
+
+            </StackLayout>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>
