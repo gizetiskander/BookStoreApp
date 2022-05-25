@@ -32,9 +32,9 @@
                         VerticalOptions="CenterAndExpand" />
                         <StackLayout Orientation="Horizontal" Spacing="10" 
                         HorizontalOptions="CenterAndExpand" Margin="0,0,10,0" Grid.Row="1">
-                            <Button x:Name="LoginBtn" Padding="20,10" BorderColor="#FFBE65" BorderWidth="2" 
+                            <Button x:Name="LoginBtn" Padding="20,10" BorderColor="#FFBE65" BorderWidth="2"   Command="{Binding LoginCommand}" CommandParameter="{Binding}"
                             BackgroundColor="#2A2A2A" CornerRadius="10" FontSize="16" Text="Войти" TextColor="#FFBE65"
-                            TextTransform="None" Clicked="LoginBtn_Clicked"/>
+                            TextTransform="None"/>
                             <Button x:Name="SignUpBtn" Padding="20,10" BorderColor="#F16F54" BorderWidth="2"
                             BackgroundColor="#2A2A2A" CornerRadius="10" FontSize="16" Text="Регистрация"
                             TextColor="#F16F54" TextTransform="None" Clicked="SignUpBtn_Clicked"/>
